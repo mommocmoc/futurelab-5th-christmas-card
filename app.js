@@ -57,7 +57,7 @@ app.publish(data => app.channel('everybody'));
 
 // Start the server
 app.listen(PORT).on('listening', () =>
-  console.log('Feathers server listening on localhost:3030')
+console.log(`Feathers server listening on ${PORT}`)
 );
 
 // For good measure let's create a message
