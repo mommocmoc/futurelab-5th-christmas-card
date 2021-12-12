@@ -31,6 +31,7 @@ class MessageService {
 
 // Creates an ExpressJS compatible Feathers application
 const app = express(feathers());
+const PORT = process.env.PORT || 3030
 
 // Parse HTTP JSON bodies
 app.use(express.json());
@@ -55,7 +56,7 @@ app.on('connection', connection =>
 app.publish(data => app.channel('everybody'));
 
 // Start the server
-app.listen(3030).on('listening', () =>
+app.listen(PORT).on('listening', () =>
   console.log('Feathers server listening on localhost:3030')
 );
 
