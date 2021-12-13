@@ -6,18 +6,28 @@
   <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/base.css">
   <!-- <link rel="stylesheet" href="//unpkg.com/feathers-chat@4.0.0/public/chat.css"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
 <body>
-  <main id="main" class="container">
     <h1>퓨처랩과 함께 할 2022, 메시지를 남겨주세요 </h1>
+    <div id="sketch" onload="draw();">
+        <!-- <canvas id="canvas" width ="300" height="300"></canvas> -->
+        </div>
+  <main id="main" class="container">
     <form class="form" onsubmit="sendMessage(event.preventDefault())">
-      <input type="text" id="message-text" placeholder="Enter message here">
-      <button type="submit" class="button button-primary">메시지  남기기!</button>
+        <label for="nickname-text">닉네임 : </label>
+        <input type="text" id="nickname-text" placeholder="닉네임">
+        <label for="message-text">닉네임 : </label>
+      <input type="text" id="message-text" placeholder="메시지">
+      <button type="submit" class="button primary">메시지  남기기!</button>
     </form>
 
     <h2>퓨처랩에 전해온 메시지:</h2>
   </main>
-
+  
+  
+    
+  <script src="sketch.js"></script>
   <script src="//unpkg.com/@feathersjs/client@^4.3.0/dist/feathers.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
   <script src="./client.js"></script>

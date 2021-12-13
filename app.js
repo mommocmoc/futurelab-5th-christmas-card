@@ -19,6 +19,7 @@ class MessageService {
     // using the messages length since it changes whenever we add one
     const message = {
       id: this.messages.length,
+      nickname : data.nickname,
       text: data.text
     }
 
@@ -63,5 +64,6 @@ console.log(`Feathers server listening on ${PORT}`)
 // For good measure let's create a message
 // So our API doesn't look so empty
 app.service('messages').create({
-  text: 'Hello world from the server'
+    nickname : '퓨처랩',
+  text: '2022년 퓨처랩과 더욱 함께해주세요. :)'
 });
